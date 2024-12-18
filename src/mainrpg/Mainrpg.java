@@ -11,6 +11,11 @@ public class Mainrpg {
 		window.setResizable(false);
 		window.setTitle("2D Adventure");
 		
+		GamePanelRPG gamePanel = new GamePanelRPG();
+		window.add(gamePanel);
+		
+		window.pack();
+		
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
 	}
