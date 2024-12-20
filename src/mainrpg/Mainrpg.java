@@ -18,6 +18,8 @@ public class Mainrpg {
 		
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
+		
+		gamePanel.startGameThread();
 	}
 
 }
