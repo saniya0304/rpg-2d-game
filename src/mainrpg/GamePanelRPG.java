@@ -36,6 +36,7 @@ public class GamePanelRPG extends JPanel implements Runnable{
          TileManager tileM = new TileManager(this);
          KeyHandler keyH = new KeyHandler();
          Thread gameThread;
+         public CollisionChecker cChecker = new CollisionChecker(this);
          public Player player = new Player(this,keyH);
          
          
@@ -118,6 +119,7 @@ public class GamePanelRPG extends JPanel implements Runnable{
                 }
             }
          }
+         
          public void update() {
         	player.update();
          }
