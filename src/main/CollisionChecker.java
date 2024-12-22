@@ -1,13 +1,13 @@
-package mainrpg;
+package main;
 
 import entity.Entity;
 
 public class CollisionChecker {
 
-	GamePanelRPG gp;
+	GamePanel gp;
 
-	public CollisionChecker(GamePanelRPG gp) {
-		this.gp = gp;
+	public CollisionChecker(GamePanel gamePanel) {
+		this.gp = gamePanel;
 	}
 	
 	public void checkTile(Entity entity) {

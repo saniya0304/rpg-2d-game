@@ -8,24 +8,24 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import mainrpg.GamePanelRPG;
-import mainrpg.KeyHandler;
+import main.GamePanel;
+import main.KeyHandler;
 
 public class Player extends Entity {
 	
-	GamePanelRPG gp;
+	GamePanel gp;
 	KeyHandler keyH;
 	
 	public final int screenX;
 	public final int screenY;
 	
-	public Player(GamePanelRPG gp, KeyHandler keyH) {
+	public Player(GamePanel gamePanel, KeyHandler keyH) {
 		 
-		this.gp = gp;
+		this.gp = gamePanel;
 		this.keyH = keyH;
 		
-		screenX = gp.screenWidth/2 - (gp.tileSize/2);
-		screenY = gp.screenHeight/2 - (gp.tileSize/2);
+		screenX = gamePanel.screenWidth/2 - (gamePanel.tileSize/2);
+		screenY = gamePanel.screenHeight/2 - (gamePanel.tileSize/2);
 		
 		solidArea = new Rectangle();
 		solidArea.x = 8;

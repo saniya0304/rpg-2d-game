@@ -7,16 +7,16 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import javax.imageio.ImageIO;
+import main.GamePanel;
 
-import mainrpg.GamePanelRPG;
 
 public class TileManager {
 
-	GamePanelRPG gp;
+	GamePanel gp;
 	public Tile[] tile;
 	public int mapTileNum[][];
 	
-	public TileManager(GamePanelRPG gp) {
+	public TileManager(GamePanel gp) {
 		
 		this.gp = gp;
 		

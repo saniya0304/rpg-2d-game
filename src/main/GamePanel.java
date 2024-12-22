@@ -1,4 +1,4 @@
-package mainrpg;
+package main;
 
 import javax.swing.JPanel;
 
@@ -12,7 +12,7 @@ import java.awt.Dimension;
 
 
 
-public class GamePanelRPG extends JPanel implements Runnable{
+public class GamePanel extends JPanel implements Runnable{
 	
          // SCREEN SETTINGS
 	     final int originalTileSize = 16; //16x16 tile
@@ -41,7 +41,7 @@ public class GamePanelRPG extends JPanel implements Runnable{
          
          
          
-         public  GamePanelRPG() {
+         public  GamePanel() {
         	 
         	 this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         	 this.setBackground(Color.black);

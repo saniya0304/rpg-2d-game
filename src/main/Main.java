@@ -1,8 +1,8 @@
-package mainrpg;
+package main;
 
 import javax.swing.JFrame;
 
-public class Mainrpg {
+public class Main {
 
 	public static void main(String[] args) {
 		
@@ -11,7 +11,7 @@ public class Mainrpg {
 		window.setResizable(false);
 		window.setTitle("2D Adventure");
 		
-		GamePanelRPG gamePanel = new GamePanelRPG();
+		GamePanel gamePanel = new GamePanel();
 		window.add(gamePanel);
 		
 		window.pack();
