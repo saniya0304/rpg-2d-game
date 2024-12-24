@@ -1,6 +1,7 @@
 package tile;
 
-import java.awt.Graphics;
+
+import java.awt.Graphics2D;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -89,7 +90,7 @@ public class TileManager {
 			
 		}
 	}
-	public void draw(Graphics g2) {
+	public void draw(Graphics2D g2) {
 		
 		
 		int worldCol = 0;
@@ -107,7 +108,7 @@ public class TileManager {
 			if(worldX + gp.tileSize > gp.player.worldX - gp.player.screenX &&
 			   worldX - gp.tileSize < gp.player.worldX + gp.player.screenX &&
 			   worldY + gp.tileSize > gp.player.worldY - gp.player.screenY &&
-			   worldY - gp.tileSize < gp.player.worldY + gp.player.screenY)
+			   worldY - gp.tileSize < gp.player.worldY + gp.player.screenY) {
 			
 			g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
 		}
@@ -122,4 +123,7 @@ public class TileManager {
 			}
 		}
 	}
+}
+		
+	
 
