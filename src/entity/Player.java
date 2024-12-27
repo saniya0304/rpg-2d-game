@@ -17,7 +17,7 @@ public class Player extends Entity {
 	KeyHandler keyH;
 	public final int screenX;
 	public final int screenY;
-	int hasKey = 0;
+	public int hasKey = 0;
 	
 	
 	
@@ -144,13 +144,17 @@ public class Player extends Entity {
     		   gp.playSE(1);
     		  hasKey++;
     		  gp.obj[i] = null;
-    		  System.out.println("Key:" + hasKey);
+    		  gp.ui.showMessage("You have got the key!");
     		  break;
     	   case "Door":
     		   if(hasKey > 0) {
     			   gp.playSE(3);
     			   gp.obj[i] = null;
     			   hasKey--;
+    			   gp.ui.showMessage("You have opened the door!");
+    		   }
+    		   else {
+    			   gp.ui.showMessage("You need key!");
     		   }
     		   System.out.println("Key:" + hasKey);
     		   break;
@@ -158,10 +162,18 @@ public class Player extends Entity {
     		   gp.playSE(2);
     		  speed += 1;
     		  gp.obj[i] = null;
+    		  gp.ui.showMessage("Speed up!");
     		  break;
+    		  
+    	   case "Chest":
+    		   gp.ui.gameFinished = true;
+    		   gp.stopMusic();
+    		   gp.playSE(4);
+    		   break;
     	   }
     	}
     }
+    
     public void draw(Graphics2D g2) {
     	
 //    	g2.setColor(Color.white);
